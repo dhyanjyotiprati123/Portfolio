@@ -1,0 +1,70 @@
+
+.navbar{
+    width: 100%;
+    padding: 4rem 6rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3;
+
+    &-left{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 3rem;
+
+        @include Responsive(mobile){
+            gap: 1rem;
+        }
+    }
+    &-logo{
+        font-size: 4rem;
+        font-weight: 700;
+        padding: 1rem 1.5rem;
+        @include Shadow-Logo;
+        border-radius: 5rem;
+        @include Responsive(mobile){
+            font-size: 3rem;
+        }
+    }
+    &-para{
+        padding: 1rem;
+        @include Flex;
+        @include Shadow-Para;
+        border-radius: 2rem;
+        font-size: 2rem;
+        font-weight: 500;
+
+        @include Responsive(tab-land){
+            display: none
+        }
+    }
+    &-right{
+        @include Flex;
+        gap: 5rem;
+        @include Responsive(mobile){
+            gap: 1rem;
+        }
+    }
+    &-user, &-burger{
+        @include Nav-Side-Box;
+        @include Shadow;
+        @include Flex;
+        flex-direction: column;
+        gap: 7px;
+        transition: all .4s ease-in;
+        cursor: pointer;
+        
+        &:hover{
+            @include Shadow-Logo;
+        }
+    }
+    &-line{
+        height: 2px;
+        width: 35px;
+        background: black;
+    }
+}

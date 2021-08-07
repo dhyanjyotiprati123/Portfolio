@@ -1,0 +1,24 @@
+
+.testicrd{
+    padding: 1.5rem;
+    width: 30rem;
+    border-radius: 1rem;
+    box-shadow: -5px -5px 21px 10px rgba(0,0,0,0.16);
+
+    &-info{
+       display: flex;
+       justify-content: space-around;
+       align-items: center;
+    }
+    &-des{
+      padding: 3rem;
+    }
+    &-author{
+      padding: 1rem 3rem;
+    }
+    &-img{
+        width: 7rem;
+        height: 7rem;
+        border-radius: 50%;
+    }
+}

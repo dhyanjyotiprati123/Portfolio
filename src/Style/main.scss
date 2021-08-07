@@ -1,0 +1,25 @@
+@import "./abstract/mixing";
+@import "./abstract/variables";
+
+@import "./basic/animation";
+@import "./basic/basic";
+
+@import "./component/intro";
+@import "./component/navbar";
+@import "./component/sidebar";
+@import "./component//portfolio";
+@import "./component/testi";
+@import "./component/work";
+@import "./component/contact";
+@import "./component/footer";
+
+@import "./layout/layout";
+
+@import "./pages/home";
+
+@import "./Smcomp/portcard";
+@import "./Smcomp/portlist";
+@import "./Smcomp/wrkcrd";
+@import "./Smcomp/testicrd";
+
+@import "./typography/typography";

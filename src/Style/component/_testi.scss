@@ -1,0 +1,16 @@
+
+.testi{
+    width: 100%;
+    padding: 5rem 0;
+    
+    &-hero{
+        margin: 0 auto;
+        width: 70%;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(35rem , 1fr));
+        justify-content: center;
+        justify-items: center;
+        align-items: center;
+        grid-gap: 3rem;
+    }
+}

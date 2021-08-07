@@ -1,0 +1,36 @@
+
+.portfolio{
+    width: 100%;
+    padding: 5rem 0;
+
+    &-list{
+        list-style: none;
+        width: 60%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 3rem 0;
+
+        @include Responsive(tab-land){
+            width: 80%;
+        }
+        @include Responsive(tab-port){
+            width: 100%;
+            justify-content: space-evenly;
+            margin: auto;
+        }
+    }
+
+    &-projects{
+        width: 70%;
+        margin: 0 auto;
+        padding-top: 5rem;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+        justify-content: center;
+        justify-items: center;
+        align-items: center;
+        grid-gap: 3rem;
+    }
+}

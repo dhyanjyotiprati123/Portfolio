@@ -1,0 +1,95 @@
+
+.work{
+    width: 100%;
+    padding: 5rem 1rem;
+    background: $wrk-clr;
+
+    &-hero{
+        width: 80%;
+        margin: 0 auto;
+        display: flex;
+        @include Responsive(big){
+            width: 90%;
+            flex-direction: column;
+        }
+    }
+    &-left{
+        flex: 4;
+        @include Flex;
+        padding: 5rem;
+        gap: 5rem;
+        flex-direction: column;
+
+        @include Responsive(big){
+            flex-direction: row;
+        }
+
+        @include Responsive(mobile){
+            gap: 2rem;
+        }
+    }
+    &-right{
+        position: relative;
+        flex: 8;
+        @include Flex;
+        
+        &-inner{
+            width: 80%;
+            height: 40rem;
+            border-radius: 3rem;
+            @include Flex;
+            overflow: hidden;
+            @include Shadow-Logo;
+
+            @include Responsive(very-big){
+                width: 90%;
+            }
+            @include Responsive(tab-port){
+                flex-direction: column;
+                height: auto;
+            }
+
+            &-info{
+               flex: 4;
+               @include Flex;
+               gap: 2rem;
+               flex-direction: column;
+            }
+            &-pic{
+              flex: 7;
+            }
+            &-img{
+                width: 100%;
+                object-fit: cover;
+                transform: rotate(-10deg);
+
+                @include Responsive(tab-port){
+                    transform: rotate(0);
+                    padding: 1rem
+                }
+            }
+        }
+
+        &-left{
+          @include Arrow;
+          left: 7px;
+          @include Responsive(very-big){
+              left: -10%;
+          }
+
+          @include Responsive(big){
+              left: -20px;
+          }
+        }
+        &-right{
+           @include Arrow;
+           right: 7px;
+           @include Responsive(very-big){
+              right: -10%;
+           }
+           @include Responsive(big){
+               right: -20px; 
+           }
+        }
+    }
+}

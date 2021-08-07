@@ -1,0 +1,27 @@
+.footer{
+    width: 100%;
+    background: #000000;
+    padding: 10rem 0;
+    @include Flex;
+    gap: 5rem;
+    color: azure;
+
+    @include Responsive(mobile){
+        flex-direction: column;
+    }
+
+    &-left{
+        display: flex;
+        flex-direction: column;
+    }
+    &-list{
+        padding: 2rem 0;
+        list-style: none;
+       @include Flex;
+       flex-direction: column;
+       gap: 4px;
+    }
+    &-item{
+        font-size: 1.5rem;
+    }
+}

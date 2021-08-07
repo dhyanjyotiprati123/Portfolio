@@ -1,0 +1,21 @@
+
+.wrkcrd{
+    padding: 2rem;
+    width: 15rem;
+    height: 15rem;
+    border: 3px solid $wrk-clr;
+    border-radius: 50%;
+    @include Flex;
+    font-size: 3rem;
+    font-weight: 300;
+    @include Shadow-wrk;
+
+    @include Responsive(tab-port){
+        width: 12rem;
+        height: 12rem;
+    }
+    @include Responsive(mobile){
+        width: 10rem;
+        height: 10rem;
+    }
+}

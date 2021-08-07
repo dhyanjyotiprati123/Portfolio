@@ -1,0 +1,19 @@
+
+.port-item{
+        font-size: 2rem;
+        text-transform: capitalize;
+        padding: 1rem 1.5rem;
+        cursor: pointer;
+        border-radius: 1rem;
+
+        @include Responsive(mobile){
+            font-size: 1.6rem;
+            padding: 1rem;
+        }
+    }
+
+
+.item-active{
+    background: $dark-blue;
+    color: white;
+}

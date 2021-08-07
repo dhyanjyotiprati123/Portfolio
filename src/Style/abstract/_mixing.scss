@@ -1,0 +1,70 @@
+
+@mixin Shadow-Logo {
+    box-shadow: 4px 4px 10px rgba(0,0,0, .15), -4px -4px 10px rgba($body-clr, .9);
+}
+
+@mixin Shadow-Para {
+    box-shadow: inset 3px 3px 8px rgba(0,0,0, .15),inset -3px -3px 8px rgba($body-clr, .9);
+}
+
+@mixin Shadow {
+    box-shadow: 5px 5px 10px rgba(0,0,0, .15), -5px -5px 10px rgba($body-clr, .9),inset 5px 5px 10px rgba(0,0,0, .15),inset -5px -5px 10px rgba($body-clr, .9);
+}
+
+@mixin Shadow-wrk {
+    box-shadow: 5px 5px 10px rgba(0,0,0, .15), -5px -5px 10px $wrk-clr-dark,inset 5px 5px 10px rgba(0,0,0, .15),inset -5px -5px 10px $wrk-clr-dark;
+}
+
+@mixin Shadow-Adv {
+    box-shadow: 5px 5px 10px rgba(0,0,0, .15),
+                2px 4px 14px $wrk-clr-dark,
+                -5px -5px 10px rgba(0,0,0, .1),
+                -6px -4px 16px $wrk-clr-dark;
+}
+
+
+@mixin Flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin Nav-Side-Box {
+    width: 7rem;
+    height: 7rem;
+    border: 2px solid rgba($body-clr, .6);
+    border-radius: 50%;
+}
+
+@mixin Arrow {
+    position: absolute;
+    width: 5rem;
+    height: 5rem;
+    border: 2px solid $wrk-clr;
+    top: 50;
+    @include Shadow-wrk;
+    border-radius: 50%;
+    cursor: pointer;
+    @include Flex;
+}
+
+
+// Media Query
+
+@mixin Responsive($breakpoint) {
+    @if $breakpoint== very-big{
+        @media screen and (max-width: 1400px){@content}
+    }
+    @if $breakpoint == big{
+        @media screen and (max-width: 1200px){@content}
+    }
+    @if $breakpoint == tab-land{
+        @media screen and (max-width: 1000px){@content}
+    }
+    @if $breakpoint == tab-port{
+        @media screen and (max-width: 750px){@content}
+    }
+    @if $breakpoint == mobile{
+        @media screen and (max-width: 600px){@content}
+    }
+}
